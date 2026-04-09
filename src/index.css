@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-neutral-200 font-sans antialiased overflow-x-hidden selection:bg-primary/30;
+  }
+}
+
+@layer components {
+  .saas-card {
+    @apply bg-surface border border-border rounded-2xl transition-all duration-300 hover:border-neutral-700 hover:bg-[#0E0E0E];
+  }
+  
+  .saas-glow {
+    @apply relative before:absolute before:inset-0 before:-z-10 before:bg-primary/10 before:blur-3xl before:rounded-full;
+  }
+
+  .btn-saas {
+    @apply px-5 py-2.5 rounded-lg bg-white text-black font-medium hover:bg-neutral-200 active:scale-95 transition-all duration-200 shadow-sm shadow-white/10;
+  }
+
+  .btn-saas-outline {
+    @apply px-5 py-2.5 rounded-lg border border-border bg-transparent text-white font-medium hover:bg-white/5 active:scale-95 transition-all duration-200;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-4;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-500;
+  }
+
+  .shimmer-border {
+    @apply relative overflow-hidden;
+  }
+
+  .shimmer-border::after {
+    content: "";
+    @apply absolute -inset-[100%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_150deg,rgba(79,70,229,0.3)_180deg,transparent_210deg)] animate-[spin_4s_linear_infinite] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+    gap: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    .bento-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    .bento-span-3 { grid-column: span 3; }
+    .bento-span-2 { grid-column: span 2; }
+    .bento-span-4 { grid-column: span 4; }
+  }
+}
+
+/* 60fps Optimization */
+* {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar - Linear Style */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full hover:bg-neutral-700 transition-colors;
+}
