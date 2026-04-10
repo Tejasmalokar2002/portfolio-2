@@ -36,22 +36,22 @@ export const skills = [
   {
     category: "Backend Architecture",
     icon: Server,
-    items: ["Java", "Spring Boot", "Microservices", "Spring Data JPA", "Hibernate"]
+    items: ["Java", "Spring Boot", "Microservices", "REST APIs", "Spring Data JPA", "Hibernate", "JDBC", "Maven", "Spring Framework"]
   },
   {
-    category: "Frontend Engineering",
+    category: "Frontend & Mobile",
     icon: Layout,
-    items: ["React", "TypeScript", "Tailwind CSS", "Angular", "Ionic"]
+    items: ["React", "Angular", "Ionic Framework", "TypeScript", "JavaScript", "HTML/CSS"]
   },
   {
-    category: "Cloud & Infrastructure",
+    category: "DevOps & Infrastructure",
     icon: Cloud,
-    items: ["AWS (EC2, S3)", "Docker", "Jenkins", "ELK Stack"]
+    items: ["Docker", "Jenkins", "AWS (EC2, S3)", "Git", "GitHub", "GitLab", "Agile"]
   },
   {
-    category: "Data & Systems",
+    category: "Data & Messaging",
     icon: Database,
-    items: ["MySQL", "Oracle", "RabbitMQ", "Redis"]
+    items: ["Oracle SQL", "RabbitMQ", "ELK Stack", "Redis", "MySQL"]
   }
 ];
 
