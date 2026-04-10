@@ -26,11 +26,18 @@ export const personalInfo = {
   role: "Full Stack Java Developer",
   experience: "1.7+ Years",
   about: "Engineer focused on building high-availability enterprise systems and modern SaaS architectures. Specialized in Java, Spring Boot Microservices, and high-performance frontend engineering.",
-  email: "tejasmalokar.dev@gmail.com",
+  email: "tejasmalokar707@gmail.com",
   github: "https://github.com/tejas-malokar",
-  linkedin: "https://linkedin.com/in/tejas-malokar",
+  linkedin: "https://www.linkedin.com/in/tejas-m-4bbb11250/",
   location: "India"
 };
+
+export const stats = [
+  { label: "Experience", value: "1.7+ Yrs" },
+  { label: "Projects", value: "10+" },
+  { label: "Delivery", value: "100%" },
+  { label: "Commits", value: "500+" }
+];
 
 export const skills = [
   {

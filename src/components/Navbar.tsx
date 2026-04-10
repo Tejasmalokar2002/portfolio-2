@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { personalInfo } from '../data/profile';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +17,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { name: 'Profile', href: '#profile' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
@@ -34,11 +36,9 @@ const Navbar = () => {
             href="#"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-xl font-bold tracking-tighter text-white flex items-center gap-2 group"
+            className="text-xl font-bold tracking-tighter text-white flex items-center gap-3 group"
           >
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
-              TM
-            </div>
+            <Logo className="w-10 h-10" />
             <span className="hidden sm:block">Tejas Malokar</span>
           </motion.a>
 

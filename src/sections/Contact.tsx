@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import emailjs from '@emailjs/browser';
 import { personalInfo } from '../data/profile';
 import { fadeInUp, staggerContainer } from '../animations/variants';
 import { Send, Github, Linkedin, Mail, MapPin, CheckCircle2, AlertCircle, ArrowUpRight } from 'lucide-react';
@@ -17,12 +18,27 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formRef.current) return;
+
     setLoading(true);
     setStatus('idle');
 
     try {
-      // Simulate EmailJS or actual API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration missing');
+      }
+
+      await emailjs.sendForm(
+        serviceId,
+        templateId,
+        formRef.current,
+        publicKey
+      );
+
       setStatus('success');
       formRef.current?.reset();
     } catch (error) {
@@ -177,6 +193,17 @@ const Contact = () => {
                 >
                   <CheckCircle2 size={18} />
                   Message sent successfully!
+                </motion.div>
+              )}
+
+              {status === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex items-center gap-2 text-red-500 bg-red-500/10 p-4 rounded-xl border border-red-500/20"
+                >
+                  <AlertCircle size={18} />
+                  Failed to send message. Please try again.
                 </motion.div>
               )}
             </form>

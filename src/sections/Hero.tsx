@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Typewriter } from 'react-simple-typewriter';
 import { personalInfo } from '../data/profile';
 import { fadeInUp, staggerContainer, reveal } from '../animations/variants';
 import { Github, Linkedin, Mail, ArrowRight, Terminal } from 'lucide-react';
@@ -41,6 +42,7 @@ const CodeSnippet = () => {
             <span className="text-muted w-4 text-right select-none">{i + 1}</span>
             <pre className="text-neutral-300">
               {line.split(/("[^"]*")/).map((part, j) => {
+                if (!part) return null;
                 if (part.startsWith('"')) return <span key={j} className="text-secondary">{part}</span>;
                 if (['const', 'developer', 'expertise'].includes(part.trim())) return <span key={j} className="text-primary">{part}</span>;
                 return part;
@@ -60,7 +62,7 @@ const CodeSnippet = () => {
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-900 via-background to-background">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-900 via-background to-background">
       <div className="absolute inset-0 bg-glow-gradient opacity-30 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
@@ -87,6 +89,22 @@ const Hero = () => {
                 Engineering <br /> 
                 <span className="gradient-text">Scalable Solutions</span>
               </motion.h1>
+              <div className="text-xl md:text-2xl font-semibold text-gray-400 h-8">
+                <Typewriter
+                  words={[
+                    'Full Stack Java Developer',
+                    'Spring Boot Specialist',
+                    'Microservices Architect',
+                    'React Developer'
+                  ]}
+                  loop={0}
+                  cursor
+                  cursorStyle="_"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </div>
               <motion.p 
                 variants={fadeInUp}
                 className="text-lg md:text-xl text-muted max-w-xl leading-relaxed font-medium"

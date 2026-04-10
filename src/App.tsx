@@ -5,6 +5,7 @@ import CustomCursor from './components/CustomCursor';
 
 // Lazy load sections for better performance
 const Hero = lazy(() => import('./sections/Hero'));
+const Profile = lazy(() => import('./sections/Profile'));
 const About = lazy(() => import('./sections/About'));
 const TechStack = lazy(() => import('./sections/TechStack'));
 const Projects = lazy(() => import('./sections/Projects'));
@@ -50,6 +51,7 @@ function App() {
         <main>
           <Suspense fallback={<SectionLoader />}>
             <Hero />
+            <Profile />
             <About />
             <TechStack />
             <Projects />

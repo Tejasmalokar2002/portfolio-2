@@ -70,13 +70,13 @@ const ArchiveModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                         <span className="text-[8px] font-bold tracking-widest uppercase text-primary/80">{project.type}</span>
                       </div>
                       <h4 className="text-xl font-bold text-white group-hover:text-primary transition-colors">{project.title}</h4>
-                      <p className="text-muted text-xs leading-relaxed line-clamp-2">{project.description}</p>
+                      <p className="text-muted text-xs leading-relaxed line-clamp-2">{(project as any).description}</p>
                     </div>
                     <div className="mt-auto pt-4 border-t border-border/50 flex flex-wrap gap-1.5">
-                      {project.tech.slice(0, 3).map(t => (
+                      {(project as any).tech.slice(0, 3).map((t: string) => (
                         <span key={t} className="px-2 py-1 rounded-md bg-white/5 text-[9px] font-bold text-neutral-500">{t}</span>
                       ))}
-                      {project.tech.length > 3 && <span className="text-[9px] text-muted font-bold">+{project.tech.length - 3}</span>}
+                      {(project as any).tech.length > 3 && <span className="text-[9px] text-muted font-bold">+{(project as any).tech.length - 3}</span>}
                     </div>
                   </div>
                 ))}
