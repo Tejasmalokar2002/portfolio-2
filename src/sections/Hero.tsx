@@ -125,13 +125,13 @@ const Hero = () => {
             </motion.div>
 
             <motion.div variants={fadeInUp} className="flex items-center gap-6 pt-4">
-              <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white transition-colors">
+              <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white transition-colors" aria-label="GitHub Profile">
                 <Github size={20} />
               </a>
-              <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white transition-colors">
+              <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white transition-colors" aria-label="LinkedIn Profile">
                 <Linkedin size={20} />
               </a>
-              <a href={`mailto:${personalInfo.email}`} className="text-muted hover:text-white transition-colors">
+              <a href={`mailto:${personalInfo.email}`} className="text-muted hover:text-white transition-colors" aria-label="Send Email">
                 <Mail size={20} />
               </a>
             </motion.div>

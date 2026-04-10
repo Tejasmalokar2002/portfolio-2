@@ -15,7 +15,7 @@ const AboutCard = ({ icon: Icon, title, description, delay = 0 }: any) => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       <div className="relative z-10">
         <div className="p-4 w-fit rounded-2xl bg-white/5 border border-white/10 mb-8 group-hover:scale-110 group-hover:bg-primary/20 group-hover:border-primary/30 transition-all duration-500 shadow-xl shadow-black/20">
-          <Icon className="text-primary group-hover:text-secondary transition-colors duration-300" size={28} />
+          <Icon className="text-primary group-hover:text-secondary transition-colors duration-300" size={28} aria-hidden="true" />
         </div>
         <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-primary transition-colors duration-300 tracking-tight">{title}</h3>
         <p className="text-muted text-base leading-relaxed group-hover:text-neutral-300 transition-colors duration-300 font-medium">

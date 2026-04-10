@@ -37,6 +37,7 @@ const Navbar = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="text-xl font-bold tracking-tighter text-white flex items-center gap-3 group"
+            aria-label="Tejas Malokar Home"
           >
             <Logo className="w-10 h-10" />
             <span className="hidden sm:block">Tejas Malokar</span>
@@ -52,6 +53,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className="text-sm font-medium text-muted hover:text-white transition-colors relative group"
+                aria-label={`Navigate to ${link.name}`}
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
@@ -62,6 +64,7 @@ const Navbar = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               className="btn-saas text-xs font-bold px-6 py-2 shadow-lg shadow-white/5 group relative overflow-hidden"
+              aria-label="Hire Me"
             >
               <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity" />
               Hire Me
@@ -73,6 +76,8 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-muted hover:text-white transition-colors p-2"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>

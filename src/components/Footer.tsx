@@ -90,6 +90,7 @@ const Footer = () => {
                     <a 
                       href={link.href} 
                       className="text-muted hover:text-white text-sm font-medium transition-all hover:translate-x-1 inline-block"
+                      aria-label={`Navigate to ${link.name}`}
                     >
                       {link.name}
                     </a>
@@ -149,6 +150,7 @@ const Footer = () => {
             whileHover={{ y: -5 }}
             whileTap={{ scale: 0.9 }}
             className="group flex items-center gap-3 px-6 py-3 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/30 transition-all shadow-xl shadow-black/20"
+            aria-label="Scroll back to top"
           >
             <span className="text-[10px] font-bold text-muted group-hover:text-white uppercase tracking-[0.2em]">
               Back to top

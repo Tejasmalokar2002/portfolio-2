@@ -11,6 +11,7 @@ const Logo = ({ className = "w-10 h-10" }: { className?: string }) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="relative z-10 w-full h-full drop-shadow-xl"
+        aria-hidden="true"
       >
         <defs>
           <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">

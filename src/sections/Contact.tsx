@@ -79,9 +79,9 @@ const Contact = () => {
             </div>
 
             <motion.div variants={fadeInUp} className="space-y-8">
-              <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-6 group">
+              <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-6 group" aria-label="Send an email to Tejas Malokar">
                 <div className="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-                  <Mail className="text-primary" size={24} />
+                  <Mail className="text-primary" size={24} aria-hidden="true" />
                 </div>
                 <div>
                   <p className="text-xs text-muted uppercase tracking-widest mb-1">Email</p>
@@ -90,7 +90,7 @@ const Contact = () => {
               </a>
               <div className="flex items-center gap-6 group">
                 <div className="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-                  <MapPin className="text-primary" size={24} />
+                  <MapPin className="text-primary" size={24} aria-hidden="true" />
                 </div>
                 <div>
                   <p className="text-xs text-muted uppercase tracking-widest mb-1">Location</p>
@@ -100,15 +100,15 @@ const Contact = () => {
             </motion.div>
 
             <motion.div variants={fadeInUp} className="flex items-center space-x-4">
-              <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="btn-saas-outline p-4 rounded-2xl flex items-center gap-2 group">
+              <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="btn-saas-outline p-4 rounded-2xl flex items-center gap-2 group" aria-label="GitHub Profile">
                 <Github size={20} />
                 <span>GitHub</span>
-                <ArrowUpRight size={14} className="opacity-50 group-hover:opacity-100 transition-opacity" />
+                <ArrowUpRight size={14} className="opacity-50 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
               </a>
-              <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="btn-saas-outline p-4 rounded-2xl flex items-center gap-2 group">
+              <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="btn-saas-outline p-4 rounded-2xl flex items-center gap-2 group" aria-label="LinkedIn Profile">
                 <Linkedin size={20} />
                 <span>LinkedIn</span>
-                <ArrowUpRight size={14} className="opacity-50 group-hover:opacity-100 transition-opacity" />
+                <ArrowUpRight size={14} className="opacity-50 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
               </a>
             </motion.div>
           </div>

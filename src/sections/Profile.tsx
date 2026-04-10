@@ -70,8 +70,9 @@ const Profile = () => {
                 <div className="relative z-10 rounded-3xl overflow-hidden border border-white/10 aspect-[4/5] shadow-2xl shadow-black/40 bg-surface">
                   <img 
                     src={profilePhoto} 
-                    alt={personalInfo.name} 
+                    alt={`Tejas Malokar - ${personalInfo.role}`} 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                   
@@ -79,7 +80,7 @@ const Profile = () => {
                   <div className="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                     <div className="flex items-center gap-4">
                       <div className="p-2 rounded-lg bg-primary/20 border border-primary/30">
-                        <User className="text-primary" size={20} />
+                        <User className="text-primary" size={20} aria-hidden="true" />
                       </div>
                       <div>
                         <p className="text-xs font-bold text-primary tracking-widest uppercase">Currently</p>
@@ -145,7 +146,7 @@ const Profile = () => {
                       >
                         <div className="flex items-start gap-4">
                           <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all">
-                            <Icon className="text-primary group-hover:text-secondary transition-colors" size={20} />
+                            <Icon className="text-primary group-hover:text-secondary transition-colors" size={20} aria-hidden="true" />
                           </div>
                           <div className="space-y-2">
                             <h4 className="font-bold text-white group-hover:text-primary transition-colors">{item.title}</h4>

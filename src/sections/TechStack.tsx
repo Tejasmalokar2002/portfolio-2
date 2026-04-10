@@ -19,7 +19,7 @@ const SkillCategory = ({ category, icon: Icon, items, delay = 0 }: any) => {
       <div className="flex items-center gap-5 mb-10 relative z-10">
         <div className="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:scale-110 group-hover:bg-primary/20 group-hover:border-primary/30 transition-all duration-500 shadow-xl shadow-black/20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <Icon className="text-primary group-hover:text-secondary transition-colors duration-300 relative z-10" size={28} />
+          <Icon className="text-primary group-hover:text-secondary transition-colors duration-300 relative z-10" size={28} aria-hidden="true" />
         </div>
         <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors duration-300 tracking-tight">
           {category}

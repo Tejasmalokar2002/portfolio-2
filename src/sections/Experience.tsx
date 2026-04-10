@@ -28,13 +28,13 @@ const ExperienceItem = ({ exp, index }: any) => {
       <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
         <div className="space-y-3">
           <div className="flex items-center gap-3 text-primary text-[10px] font-bold tracking-[0.2em] uppercase">
-            <Calendar size={12} className="opacity-70" />
+            <Calendar size={12} className="opacity-70" aria-hidden="true" />
             <span>{exp.period}</span>
           </div>
           <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight group-hover:text-primary transition-colors duration-300">{exp.role}</h3>
           <div className="flex flex-wrap items-center gap-3 text-muted text-sm font-medium">
             <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10">
-              <Building2 size={14} className="text-secondary" />
+              <Building2 size={14} className="text-secondary" aria-hidden="true" />
               <span>{exp.company}</span>
             </div>
             {exp.client && (
@@ -59,7 +59,7 @@ const ExperienceItem = ({ exp, index }: any) => {
           {exp.highlights.map((highlight: string, i: number) => (
             <div key={i} className="flex items-start gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 group-hover/card:border-primary/20 group-hover/card:bg-primary/[0.02] transition-all duration-500">
               <div className="mt-1 p-1 rounded-md bg-primary/10 border border-primary/20">
-                <CheckCircle2 className="text-primary shrink-0" size={14} />
+                <CheckCircle2 className="text-primary shrink-0" size={14} aria-hidden="true" />
               </div>
               <span className="text-xs text-neutral-500 leading-relaxed group-hover/card:text-neutral-300 transition-colors">
                 {highlight}

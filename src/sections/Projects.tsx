@@ -59,7 +59,13 @@ const ArchiveModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                       </div>
                       <div className="flex gap-2">
                         {project.link && (
-                          <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 text-muted hover:text-white transition-colors">
+                          <a 
+                            href={project.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="p-2 rounded-lg bg-white/5 text-muted hover:text-white transition-colors"
+                            aria-label={`View ${project.title} live`}
+                          >
                             <ExternalLink size={16} />
                           </a>
                         )}
@@ -204,6 +210,7 @@ const ProjectCard = ({ project }: any) => {
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
                 className="w-14 h-14 flex items-center justify-center rounded-2xl bg-white text-black hover:bg-primary hover:text-white transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0.1)] group/btn"
+                aria-label={`Open ${project.title} live demo`}
               >
                 <ArrowUpRight size={28} strokeWidth={2.5} />
               </motion.a>
