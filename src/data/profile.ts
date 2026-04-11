@@ -24,7 +24,7 @@ import {
 export const personalInfo = {
   name: "Tejas Malokar",
   role: "Full Stack Java Developer",
-  experience: "1.7+ Years",
+  experience: "2+ Years",
   about: "Engineer focused on building high-availability enterprise systems and modern SaaS architectures. Specialized in Java, Spring Boot Microservices, and high-performance frontend engineering.",
   email: "tejasmalokar707@gmail.com",
   github: "https://github.com/tejas-malokar",
@@ -33,7 +33,7 @@ export const personalInfo = {
 };
 
 export const stats = [
-  { label: "Experience", value: "1.7+ Yrs" },
+  { label: "Experience", value: "1.f+ Yrs" },
   { label: "Projects", value: "10+" },
   { label: "Delivery", value: "100%" },
   { label: "Commits", value: "500+" }
