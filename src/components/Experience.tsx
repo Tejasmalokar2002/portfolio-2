@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { experience } from '../data/profile';
 import { Briefcase, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
-
+import { Helmet } from 'react-helmet';
 const Experience = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -11,6 +11,21 @@ const Experience = () => {
   });
 
   return (
+    <>
+    <Helmet>
+        <title>Experience | Tejas Malokar | Full Stack Developer</title>
+        <meta
+          name="description"
+          content="Explore the professional experience of Tejas Malokar, a Full Stack Java Developer working on enterprise applications, microservices, and scalable systems."
+        />
+        <meta
+          name="keywords"
+          content="Tejas Malokar Experience, Java Developer Experience, Spring Boot Projects, Microservices Experience"
+        />
+        <meta name="author" content="Tejas Malokar" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+ 
     <section id="experience" className="py-24 bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -86,6 +101,7 @@ const Experience = () => {
         </div>
       </div>
     </section>
+       </>
   );
 };
 

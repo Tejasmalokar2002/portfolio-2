@@ -3,9 +3,30 @@ import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import { personalInfo } from '../data/profile';
 import { Github, Linkedin, Mail, Download, ChevronDown } from 'lucide-react';
-
+import { Helmet } from 'react-helmet';
 const Hero = () => {
   return (
+    <>
+     <Helmet>
+        <title>Tejas Malokar | Full Stack Java Developer | Portfolio</title>
+        <meta
+          name="description"
+          content="Tejas Malokar is a Full Stack Java Developer specializing in Spring Boot, Microservices, Kafka, and React. Explore projects, experience, and contact details."
+        />
+        <meta
+          name="keywords"
+          content="Tejas Malokar, Full Stack Developer, Java Developer, Spring Boot, Microservices, React Developer, Portfolio"
+        />
+        <meta name="author" content="Tejas Malokar" />
+        <meta name="robots" content="index, follow" />
+
+        {/* 🔥 Open Graph (LinkedIn Preview) */}
+        <meta property="og:title" content="Tejas Malokar | Full Stack Developer" />
+        <meta property="og:description" content="Portfolio of Tejas Malokar showcasing projects, skills and experience in Java, Spring Boot and React." />
+        <meta property="og:url" content="https://tejasmalokar.in" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-1/4 -left-20 w-72 h-72 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
@@ -106,6 +127,7 @@ const Hero = () => {
         <ChevronDown size={32} className="text-gray-500 hover:text-white transition-colors" />
       </motion.div>
     </section>
+        </>
   );
 };
 

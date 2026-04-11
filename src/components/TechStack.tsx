@@ -16,20 +16,26 @@ const TechStack = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            My <span className="text-primary">Tech Stack</span>
-          </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-            A comprehensive set of tools and technologies I use to build robust, 
-            scalable, and modern software solutions.
-          </p>
-        </motion.div>
+  ref={ref}
+  initial={{ opacity: 0, y: 30 }}
+  animate={inView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.6 }}
+  className="text-center mb-16"
+>
+  <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+    Tejas Malokar <span className="text-primary">Tech Stack</span>
+  </h2>
+
+  {/* ✅ Hidden SEO Heading */}
+  <h3 className="sr-only">
+    Full Stack Java Developer Skills - Tejas Malokar
+  </h3>
+
+  {/* ✅ SEO Description */}
+  <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+    Tejas Malokar is a Full Stack Java Developer skilled in Spring Boot, Microservices, Kafka, React, and modern web technologies for building scalable applications.
+  </p>
+</motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skills.map((skillGroup, groupIndex) => (

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { personalInfo, stats } from '../data/profile';
 import { Code2, Server, Smartphone, Globe } from 'lucide-react';
-
+import { Helmet } from 'react-helmet';
 const About = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -13,6 +13,18 @@ const About = () => {
   const icons = [Code2, Server, Smartphone, Globe];
 
   return (
+
+    <>
+    <Helmet>
+        <title>About Tejas Malokar | Full Stack Java Developer</title>
+        <meta
+          name="description"
+          content="Learn about Tejas Malokar, a Full Stack Java Developer specializing in Spring Boot, Microservices, Kafka, and React."
+        />
+        <meta name="keywords" content="Tejas Malokar, Full Stack Developer, Java Developer, Spring Boot, Microservices, Kafka, React Developer" />
+        <meta name="author" content="Tejas Malokar" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
     <section id="about" className="py-24 bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -78,6 +90,7 @@ const About = () => {
         </motion.div>
       </div>
     </section>
+    </>
   );
 };
 

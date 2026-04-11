@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { projects } from '../data/profile';
 import { ExternalLink, Github, Code2, ArrowRight } from 'lucide-react';
-
+import { Helmet } from 'react-helmet';
 const Projects = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -11,6 +11,19 @@ const Projects = () => {
   });
 
   return (
+    <>
+     <Helmet>
+    <title>Projects | Tejas Malokar | Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Explore projects by Tejas Malokar including Spring Boot microservices, Kafka-based systems, and full stack applications."
+    />
+    <meta
+      name="keywords"
+      content="Tejas Malokar Projects, Spring Boot Projects, Microservices Projects, React Projects"
+    />
+  </Helmet>
+
     <section id="projects" className="py-28 bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
@@ -123,6 +136,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
+        </>
   );
 };
 

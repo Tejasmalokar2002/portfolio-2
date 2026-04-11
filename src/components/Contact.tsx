@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import emailjs from '@emailjs/browser';
 import { personalInfo } from '../data/profile';
 import { Send, Github, Linkedin, Mail, MapPin, CheckCircle2, AlertCircle } from 'lucide-react';
-
+import { Helmet } from 'react-helmet';
 const Contact = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -36,7 +36,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background relative overflow-hidden">
+    <>
+     <Helmet>
+        <title>Contact Tejas Malokar | Full Stack Developer</title>
+        <meta
+          name="description"
+          content="Contact Tejas Malokar, a Full Stack Java Developer. Reach out for projects, collaborations, or job opportunities."
+        />
+        <meta
+          name="keywords"
+          content="Contact Tejas Malokar, Java Developer, Full Stack Developer, Hire Developer, Spring Boot Developer"
+        />
+        <meta name="author" content="Tejas Malokar" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+       <section id="contact" className="py-24 bg-background relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
@@ -203,6 +217,8 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </>
+   
   );
 };
 
