@@ -33,7 +33,7 @@ export const personalInfo = {
 };
 
 export const stats = [
-  { label: "Experience", value: "1.f+ Yrs" },
+  { label: "Experience", value: "2+ Yrs" },
   { label: "Projects", value: "10+" },
   { label: "Delivery", value: "100%" },
   { label: "Commits", value: "500+" }

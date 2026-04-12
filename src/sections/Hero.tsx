@@ -62,18 +62,18 @@ const CodeSnippet = () => {
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-900 via-background to-background">
+    <section id="hero" className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-900 via-background to-background pt-28 md:pt-32">
       <div className="absolute inset-0 bg-glow-gradient opacity-30 pointer-events-none" />
       
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full py-12 lg:py-0">
         <motion.div
           variants={staggerContainer}
           initial="initial"
           animate="animate"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
         >
           {/* Left Side: Content */}
-          <div className="flex flex-col items-start space-y-10">
+          <div className="lg:col-span-7 flex flex-col items-start space-y-8 md:space-y-10">
             <motion.div variants={fadeInUp}>
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-[10px] font-bold tracking-[0.2em] uppercase">
                 <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
@@ -84,12 +84,13 @@ const Hero = () => {
             <div className="space-y-6">
               <motion.h1 
                 variants={fadeInUp}
-                className="text-6xl md:text-8xl font-extrabold tracking-tight leading-[1.1] text-white"
+                className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.05] text-white"
               >
                 Engineering <br /> 
-                <span className="gradient-text">Scalable Solutions</span>
+                <span className="gradient-text">Scalable Systems</span>
               </motion.h1>
-              <div className="text-xl md:text-2xl font-semibold text-gray-400 h-8">
+              <div className="text-lg md:text-2xl font-bold text-primary/80 h-8 flex items-center gap-2">
+                <span className="text-muted text-sm font-mono">&gt;</span>
                 <Typewriter
                   words={[
                     'Full Stack Java Developer',
@@ -102,7 +103,7 @@ const Hero = () => {
                   cursorStyle="_"
                   typeSpeed={70}
                   deleteSpeed={50}
-                  delaySpeed={1000}
+                  delaySpeed={2000}
                 />
               </div>
               <motion.p 
@@ -138,7 +139,7 @@ const Hero = () => {
           </div>
 
           {/* Right Side: Code Snippet */}
-          <div className="hidden lg:flex justify-end">
+          <div className="hidden lg:flex lg:col-span-5 justify-end">
             <CodeSnippet />
           </div>
         </motion.div>
@@ -148,7 +149,7 @@ const Hero = () => {
         variants={reveal}
         initial="initial"
         animate="animate"
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-muted"
       >
         <span className="text-[10px] uppercase tracking-[0.2em]">Scroll to explore</span>
         <motion.div 
