@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { personalInfo } from '../data/profile';
 import { fadeInUp, staggerContainer, scaleIn } from '../animations/variants';
 import { Code2, Cpu, Globe, GraduationCap, Sparkles, User, Zap } from 'lucide-react';
-import profilePhoto from '../../public/091A9064.jpg';
+import profilePhoto from '../../public/091A9064.webp';
 
 const Profile = () => {
   const [ref, inView] = useInView({
